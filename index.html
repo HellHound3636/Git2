@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<!--
+  For Debopriya.
+  Every number on this page was checked twice before I let you see it.
+  — S.K. (Pingu)
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Shiv Kushwaha">
+<meta name="description" content="26,898 hours, counted — for Dr. Debopriya Das.">
+<title>Twenty-Seven Thousand Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@300;400;500&display=swap">
+
+<style>
+/* ─────────────────────────────────────────────────────────────
+   Palette drawn from haematoxylin & eosin — the stain on every
+   skin biopsy a dermatologist ever reads. Violet is chromatin;
+   eosin, the red dye, is cytoplasm and collagen. Her colour and
+   the tissue's are the same one. Gold appears exactly twice.
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --ground:        #150B1C;
+  --ground-2:      #1D1026;
+  --ground-3:      #241533;
+  --hema-deep:     #2E1A47;
+  --hema:          #7A54B0;
+  --hema-soft:     #9B7BC9;
+  --eosin:         #F94F68;
+  --eosin-pale:    #F7D9E0;
+  --keratin:       #D9A441;   /* the line — always on a coloured band */
+  --milo-a:        #EFE2CC;   /* Milo's coat */
+  --milo-b:        #CDB392;   /* and his shading */
+  --coat:          #EDE6EF;   /* the white coat */
+  --coat-fold:     #AC9DB6;
+  --keratin-ink:   #D9A441;   /* the same gold as text/dot on the page ground */
+
+  --text:          #EFE3EC;
+  --text-soft:     #C4AFC6;
+  --text-mute:     #907A98;
+  --rule:          #38254A;
+  --rule-soft:     #2A1A3A;
+
+  --band-1:        #3D2159;
+  --band-2:        #6A3F7E;
+  --band-3:        #C87088;
+  --band-4:        #F0798C;
+
+  --shadow:        0 24px 70px -30px rgba(0,0,0,.85);
+
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --body:    "Newsreader", Iowan Old Style, Georgia, serif;
+  --mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 34rem;
+  --pad: clamp(1.25rem, 5vw, 3.5rem);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ground:      #FBF3F6;
+    --ground-2:    #F5E9EE;
+    --ground-3:    #EFDFE7;
+    --hema-deep:   #2E1A47;
+    --hema:        #6B4599;
+    --hema-soft:   #55357A;
+    --eosin:       #B3132C;   /* deep crimson: clears 4.5:1 on all three light grounds */
+    --eosin-pale:  #F7D9E0;
+    --keratin:     #E0A83F;
+    --milo-a:      #E4D2B2;
+    --milo-b:      #B99A73;
+    --coat:        #FCFAFC;
+    --coat-fold:   #B9A7BE;
+    --keratin-ink: #8E6210;   /* darkened for 4.9:1 on the light ground */
+
+    --text:        #241533;
+    --text-soft:   #4A3556;
+    --text-mute:   #74617F;
+    --rule:        #DCC6D3;
+    --rule-soft:   #E8D5DF;
+
+    --band-1:      #3D2159;
+    --band-2:      #7A4E8E;
+    --band-3:      #D2879A;
+    --band-4:      #F2A2AE;
+
+    --shadow:      0 24px 70px -34px rgba(46,26,71,.30);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--body);
+  font-optical-sizing: auto;
+  font-size: clamp(1.02rem, .55vw + .92rem, 1.16rem);
+  line-height: 1.72;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Drifting nuclei, behind everything */
+#field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .55;
+}
+@media (prefers-color-scheme: light) { #field { opacity: .30; } }
+
+.page { position: relative; z-index: 1; }
+
+section { padding: clamp(4.5rem, 11vh, 8.5rem) var(--pad); }
+
+.wrap { max-width: 62rem; margin: 0 auto; }
+.narrow { max-width: var(--measure); }
+
+/* ── Type roles ─────────────────────────────────────────────── */
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+  font-weight: 400;
+  text-wrap: balance;
+  line-height: 1.08;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 7.4vw, 5.5rem);
+  letter-spacing: -.022em;
+  font-variation-settings: "SOFT" 60, "WONK" 1;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4.2vw, 3.1rem);
+  letter-spacing: -.018em;
+  margin-bottom: 1.6rem;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  letter-spacing: -.01em;
+}
+
+p { margin: 0 0 1.15em; }
+p:last-child { margin-bottom: 0; }
+
+em { font-style: italic; color: var(--eosin); }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: .7rem;
+  font-weight: 400;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--hema-soft);
+  margin: 0 0 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .85rem;
+  align-items: center;
+}
+.eyebrow span::before { content: "·"; margin-right: .85rem; color: var(--rule); }
+.eyebrow span:first-child::before { content: none; margin: 0; }
+
+.lede {
+  font-size: clamp(1.12rem, 1.4vw, 1.32rem);
+  line-height: 1.68;
+  color: var(--text-soft);
+  max-width: var(--measure);
+}
+
+.fig { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: clamp(4rem, 12vh, 8rem);
+  padding-bottom: clamp(4rem, 10vh, 7rem);
+}
+
+.hero h1 { max-width: 15ch; }
+
+.total {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 300;
+  font-size: clamp(4.2rem, 18vw, 12rem);
+  line-height: .92;
+  letter-spacing: -.045em;
+  color: var(--eosin);
+  /* line-height .92 makes the line box shorter than the ink, so the comma's
+     descender overhangs it — the bottom margin is in em so it scales with the
+     clamped font size and always clears the tail. */
+  margin: clamp(1.8rem, 4vw, 3rem) 0 .2em;
+  display: block;
+}
+
+.total-unit {
+  font-family: var(--mono);
+  font-size: .74rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.hero .lede { max-width: 40rem; }
+
+.scroll-hint {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-top: clamp(2.5rem, 6vh, 4.5rem);
+}
+
+/* ── The section (strata to scale) ──────────────────────────── */
+
+.section-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.strata {
+  display: flex;
+  flex-direction: column;
+  height: clamp(32rem, 66vh, 44rem);
+  position: sticky;
+  top: clamp(2rem, 8vh, 5rem);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--rule);
+}
+
+/* Band heights are set as exact percentages of the total hours, not flex-grow:
+   grow only divides LEFTOVER space, and border-box padding floors each base
+   size — either one silently stops the bands being to scale. */
+.band {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  min-height: 0;
+  overflow: hidden;
+  padding: .38rem .7rem;
+  border-bottom: 1px solid rgba(0,0,0,.28);
+}
+.band:last-child { border-bottom: 0; }
+.band-1, .band-2 { align-items: flex-start; padding-top: .62rem; }
+.band-4 { padding-top: .2rem; padding-bottom: .2rem; }
+.band-4 .band-name, .band-4 .band-h { font-size: .58rem; }
+
+.band-1 { background: var(--band-1); flex: 0 0 calc((100% - 8px) * 0.65358); }  /* 17,580 h */
+.band-2 { background: var(--band-2); flex: 0 0 calc((100% - 8px) * 0.17641); }  /*  4,745 h */
+.band-3 { background: var(--band-3); flex: 0 0 calc((100% - 8px) * 0.11927); }  /*  3,208 h */
+.band-4 { background: var(--band-4); flex: 0 0 calc((100% - 8px) * 0.05075); }  /*  1,365 h */
+
+/* 3 August 2025: the first exam, sat as a rehearsal. It falls 24.94% of the way
+   through stratum III, so it is drawn inside that band rather than between bands.
+   Uses --text so it reads against band-3 in both themes. */
+.exam-mark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24.94%;
+  height: 2px;
+  background: currentColor;   /* the band's own ink — reads in both themes */
+  opacity: .8;
+}
+
+/* The journey home is 0 h, so it gets a line rather than a band — zero hours,
+   zero thickness. The bands divide (100% - 8px) so the line's own height comes
+   out of the budget rather than overflowing it and clipping the last band. */
+.junction {
+  flex: 0 0 8px;
+  background: var(--keratin);
+  border-top: 1px solid rgba(0,0,0,.5);
+  border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+.band-1, .band-2 { color: #F0E4EE; }
+.band-3, .band-4 { color: #1F1029; }
+
+.band-name {
+  font-family: var(--mono);
+  font-size: .66rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  opacity: .92;
+  line-height: 1.3;
+}
+
+.band-h {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: .72rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: .95;
+}
+
+.strata-cap {
+  font-family: var(--mono);
+  font-size: .64rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-top: .9rem;
+  line-height: 1.6;
+}
+
+/* ── Phase entries ──────────────────────────────────────────── */
+
+.phases { display: flex; flex-direction: column; gap: clamp(2.5rem, 6vh, 4rem); }
+
+.phase { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+
+.phase-meta {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem .9rem;
+  margin-bottom: .9rem;
+}
+.phase-meta b { color: var(--eosin); font-weight: 400; }
+
+.phase h3 { margin-bottom: .8rem; }
+.phase p { color: var(--text-soft); }
+
+.swatch {
+  display: inline-block;
+  width: .62rem; height: .62rem;
+  border-radius: 50%;
+  margin-right: .5rem;
+  vertical-align: baseline;
+  position: relative;
+  top: .02rem;
+}
+
+/* ── Milo ───────────────────────────────────────────────────── */
+
+.milo {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1.1rem, 3vw, 2rem);
+  align-items: center;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--ground-2);
+  padding: clamp(1.25rem, 3vw, 1.9rem);
+}
+
+.milo-art { width: clamp(80px, 13vw, 124px); }
+.milo-art svg { width: 100%; height: auto; display: block; }
+
+.milo-label {
+  font-family: var(--mono);
+  font-size: .64rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin: 0 0 .45rem;
+}
+
+.milo h3 { margin-bottom: .7rem; }
+.milo p:last-child { color: var(--text-soft); margin: 0; }
+
+@media (max-width: 34rem) {
+  .milo { grid-template-columns: 1fr; justify-items: start; }
+}
+
+/* ── Reunion: 2,150 km closing on 25 April 2025 ─────────────── */
+
+.reunion { margin: 1.9rem 0 0; }
+
+.reunion-scene {
+  position: relative;
+  height: 94px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--ground-2);
+  overflow: hidden;
+}
+
+.road {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 58%;
+  border-top: 2px dashed var(--rule);
+}
+
+.city, .km {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: .58rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  white-space: nowrap;
+}
+.city { top: 58%; margin-top: 11px; transform: translateX(-50%); }
+.city-a { left: 12%; }
+.city-b { left: 88%; }
+.km { left: 50%; top: 58%; margin-top: -30px; transform: translateX(-50%); }
+
+.rh {
+  position: absolute;
+  top: 58%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  color: var(--eosin);
+  transform: translateX(-50%);
+}
+.rh svg { width: 100%; height: 100%; display: block; fill: currentColor; }
+.rh-wait { left: 88%; }
+.rh-move { left: 12%; }
+
+.pop { position: absolute; left: 86%; top: 58%; margin-top: -8px; width: 0; height: 0; }
+.pop svg { position: absolute; width: 9px; height: 9px; fill: var(--eosin); opacity: 0; }
+
+@keyframes journey {
+  0%, 10% { left: 12%; }
+  68%     { left: 85%; }
+  74%     { left: 82.5%; }
+  100%    { left: 85%; }
+}
+@keyframes meetPulse {
+  0%, 66% { transform: translateX(-50%) scale(1); }
+  73%     { transform: translateX(-50%) scale(1.6); }
+  100%    { transform: translateX(-50%) scale(1.15); }
+}
+@keyframes pop {
+  0%, 68% { transform: translate(0, 0) scale(.3); opacity: 0; }
+  77%     { opacity: 1; }
+  100%    { transform: translate(var(--px), var(--py)) scale(1); opacity: 0; }
+}
+
+.reunion.seen .rh-move { animation: journey  3.6s cubic-bezier(.45,0,.25,1) .35s forwards; }
+.reunion.seen .rh-wait { animation: meetPulse 3.6s ease-out .35s forwards; }
+.reunion.seen .pop svg { animation: pop       3.6s ease-out .35s forwards; }
+
+.reunion figcaption {
+  font-family: var(--mono);
+  font-size: .62rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-top: .85rem;
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reunion .rh-move { animation: none; left: 85%; }
+  .reunion .pop { display: none; }
+}
+
+/* ── Comparison cards ───────────────────────────────────────── */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+  gap: 1px;
+  background: var(--rule-soft);
+  border: 1px solid var(--rule-soft);
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--ground-2);
+  padding: clamp(1.5rem, 3vw, 2.1rem);
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+
+.card-fig {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(1.7rem, 3.4vw, 2.35rem);
+  font-weight: 300;
+  letter-spacing: -.035em;
+  color: var(--eosin);
+  line-height: 1;
+}
+
+.card-label {
+  font-family: var(--mono);
+  font-size: .64rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+}
+
+.card p {
+  font-size: .95rem;
+  line-height: 1.62;
+  color: var(--text-soft);
+  margin: .25rem 0 0;
+}
+
+/* ── The pivot ──────────────────────────────────────────────── */
+
+.pivot { background: var(--ground-3); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+
+.ratio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .6rem 1.4rem;
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(1.5rem, 4.5vw, 2.9rem);
+  font-weight: 300;
+  letter-spacing: -.03em;
+  margin: 2.5rem 0;
+  line-height: 1.15;
+}
+.ratio .in  { color: var(--eosin); }
+.ratio .out { color: var(--hema-soft); }
+.ratio .vs  { font-size: .5em; color: var(--text-soft); letter-spacing: .18em; text-transform: uppercase; }
+
+.pull {
+  font-family: var(--display);
+  font-variation-settings: "SOFT" 70, "WONK" 1;
+  font-size: clamp(1.4rem, 3vw, 2.05rem);
+  line-height: 1.32;
+  letter-spacing: -.015em;
+  color: var(--text);
+  border-left: 2px solid var(--eosin);
+  padding-left: clamp(1.1rem, 3vw, 2rem);
+  margin: 2.5rem 0 0;
+  max-width: 30ch;
+  text-wrap: balance;
+}
+
+/* ── Derm ───────────────────────────────────────────────────── */
+
+.derm-figs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.derm-fig .n {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(1.85rem, 3.6vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: -.035em;
+  color: var(--hema-soft);
+  display: block;
+  line-height: 1;
+  margin-bottom: .6rem;
+}
+.derm-fig p {
+  font-size: .9rem;
+  line-height: 1.58;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+/* ── The split: 10 March 2023 cuts the hours almost exactly in half ── */
+
+.split { position: relative; margin: 3rem 0 0; }
+
+.split-bar {
+  display: flex;
+  height: 3.75rem;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}
+
+.split-a, .split-b {
+  display: flex;
+  align-items: center;
+  padding: 0 .9rem;
+  min-width: 0;
+}
+.split-a { flex: 0 0 50.12%; background: var(--band-2); color: #F0E4EE; }
+.split-b { flex: 0 0 49.88%; background: var(--band-4); color: #1F1029; justify-content: flex-end; }
+
+.split-h {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: .8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.split-mark {
+  position: absolute;
+  left: 50.12%;
+  top: -.5rem;
+  height: calc(3.75rem + 1rem + 2px);
+  width: 2px;
+  background: var(--keratin);
+  transform: translateX(-1px);
+}
+
+.split-legend {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  gap: .75rem;
+  margin-top: 1.35rem;
+  font-family: var(--mono);
+  font-size: .64rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+}
+.split-legend :last-child { text-align: right; }
+.split-date { color: var(--keratin-ink); letter-spacing: .1em; }
+
+/* ── Letter ─────────────────────────────────────────────────── */
+
+.letter { padding-bottom: clamp(7rem, 18vh, 12rem); }
+
+.letter .narrow p { color: var(--text); }
+
+.letter-list {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: var(--measure);
+}
+
+.letter-list li { border-top: 1px solid var(--rule-soft); padding-top: 1.3rem; }
+
+.letter-list li.has-art {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1.1rem, 3vw, 1.9rem);
+  align-items: start;
+}
+.li-art { width: clamp(74px, 10vw, 106px); }
+.li-art svg { width: 100%; height: auto; display: block; }
+
+@media (max-width: 34rem) {
+  .letter-list li.has-art { grid-template-columns: 1fr; }
+}
+
+.letter-list h3 {
+  font-size: 1.12rem;
+  color: var(--eosin);
+  margin-bottom: .55rem;
+  font-variation-settings: "SOFT" 50, "WONK" 0;
+}
+
+.letter-list p { color: var(--text-soft); margin: 0; }
+
+.close {
+  margin-top: clamp(3.5rem, 8vh, 5.5rem);
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+  max-width: var(--measure);
+}
+
+.close p { font-size: clamp(1.08rem, 1.3vw, 1.22rem); }
+
+.close .big {
+  font-family: var(--display);
+  font-variation-settings: "SOFT" 80, "WONK" 1;
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
+  line-height: 1.24;
+  letter-spacing: -.02em;
+  color: var(--eosin);
+  margin: 2rem 0;
+  text-wrap: balance;
+}
+
+.sig {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-top: 3rem;
+  line-height: 1.9;
+}
+
+/* ── Scroll heart: travels the rail, grows, then bursts ─────── */
+
+.prog {
+  position: fixed;
+  right: clamp(10px, 2.2vw, 26px);
+  top: 15vh;
+  bottom: 15vh;
+  width: 34px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.prog-rail {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.prog-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0;
+  background: var(--eosin);
+}
+
+.prog-heart {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  margin-left: -13px;
+  margin-top: -13px;
+  color: var(--eosin);
+  transform: scale(.45);
+  will-change: transform, top;
+}
+.prog-heart svg { width: 100%; height: 100%; display: block; fill: currentColor; }
+
+@keyframes heartBurst {
+  0%   { transform: scale(1.6); opacity: 1; }
+  35%  { transform: scale(2.9); opacity: 1; }
+  100% { transform: scale(5.2); opacity: 0; }
+}
+.prog-heart.burst { animation: heartBurst .6s cubic-bezier(.2,.7,.3,1) forwards; }
+
+.rain {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.fh { position: absolute; top: -10vh; will-change: transform, opacity; }
+.fh svg { width: 100%; height: 100%; display: block; fill: currentColor; }
+
+@keyframes fall {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+  7%   { opacity: 1; }
+  100% { transform: translate3d(var(--dx), 122vh, 0) rotate(var(--rot)); opacity: 0; }
+}
+
+@media (max-width: 34rem) {
+  .prog { right: 2px; width: 18px; top: 20vh; bottom: 20vh; }
+  .prog-heart { width: 16px; height: 16px; margin-left: -8px; margin-top: -8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prog-heart { transform: scale(1); }
+}
+
+/* ── Reveal ─────────────────────────────────────────────────── */
+
+.rise { opacity: 0; transform: translateY(18px); transition: opacity .85s cubic-bezier(.2,.7,.3,1), transform .85s cubic-bezier(.2,.7,.3,1); }
+.rise.seen { opacity: 1; transform: none; }
+
+:focus-visible { outline: 2px solid var(--eosin); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+@media (max-width: 46rem) {
+  .section-grid { grid-template-columns: 1fr; }
+  .strata { position: static; height: 32rem; }
+}
+</style>
+</head>
+
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="hrt" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
+</svg>
+
+<div class="prog" aria-hidden="true">
+  <div class="prog-rail"><div class="prog-fill" id="progFill"></div></div>
+  <div class="prog-heart" id="progHeart">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+  </div>
+</div>
+<div class="rain" id="rain" aria-hidden="true"></div>
+
+<main class="page">
+
+  <!-- ── HERO ──────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow rise">
+        <span>NEET PG 2026</span><span>Written 30 August</span><span>The hard part is behind you</span><span>Now let someone count it</span>
+      </p>
+
+      <h1 class="rise">Twenty-seven thousand hours of Dr. Debopriya Das.</h1>
+
+      <span class="total rise" id="counter" data-target="26898">0</span>
+      <span class="total-unit rise">Hours worked · July 2019 → 30 August 2026 · 2,618 days</span>
+
+      <p class="lede rise">
+        You have just finished something that took seven years, and I would bet anything
+        that you are sitting there feeling you could have done more. You couldn't have. So
+        here is the count instead — every ward round, every 4&nbsp;a.m. revision, every hour
+        you were far too tired to notice you were being extraordinary. It isn't a guess at
+        your score; nobody has that yet, and it turns out this page doesn't need it. It isn't
+        flattered either: take every figure at its meanest and the sum still comes to 24,800.
+        Somebody had to add it up. So I did.
+      </p>
+
+      <p class="scroll-hint rise">↓ Read the section</p>
+    </div>
+  </section>
+
+  <!-- ── STRATA ────────────────────────────────────────────── -->
+  <section>
+    <div class="wrap">
+      <h2 class="rise">Read it the way you'd read a slide.</h2>
+      <p class="lede rise">
+        Four bands. Every one drawn to scale — the thickness of each is the hours you put
+        into it, nothing else. This is seven years of your life rendered as a cross-section,
+        and the first thing you should notice is how much of it is <em>below</em> the part
+        everyone talks about.
+      </p>
+
+      <div class="section-grid">
+
+        <div>
+          <div class="strata rise" role="img" aria-label="Cross-section: MBBS 17,580 hours; internship 4,745 hours; the journey home, zero hours; long preparation 3,208 hours, marked with the first exam on 3 August 2025; final sprint 1,365 hours.">
+            <div class="band band-1">
+              <span class="band-name">Stratum I<br>MBBS</span>
+              <span class="band-h">17,580 h</span>
+            </div>
+            <div class="band band-2">
+              <span class="band-name">Stratum II<br>Internship</span>
+              <span class="band-h">4,745 h</span>
+            </div>
+            <div class="junction" title="25 April 2025 — home"></div>
+            <div class="band band-3">
+              <span class="exam-mark" aria-hidden="true"></span>
+              <span class="band-name">Stratum III · The long year</span>
+              <span class="band-h">3,208 h</span>
+            </div>
+            <div class="band band-4">
+              <span class="band-name">IV · Sprint</span>
+              <span class="band-h">1,365 h</span>
+            </div>
+          </div>
+          <p class="strata-cap rise">Band height ∝ hours logged. Total 26,898 h.<br>Gold: 25 Apr 2025, the only zero. Pale: 3 Aug 2025, the first hall.</p>
+        </div>
+
+        <div class="phases">
+
+          <article class="phase rise">
+            <p class="phase-meta">
+              <span><span class="swatch" style="background:var(--band-1)"></span>Stratum I</span>
+              <span>Jul 2019 → Apr 2024</span>
+              <span>Sri Ramachandra, Chennai</span>
+              <span>1,758 days × 10 h</span>
+              <span><b>17,580 hours</b></span>
+            </p>
+            <h3>The years nobody claps for</h3>
+            <p>
+              Four years and ten months at ten hours a day, all of it at Sri Ramachandra
+              Medical College in Chennai, all of it a very long way from your own bed. Anatomy
+              first — and at the end of that very first year, in a city you had only just moved
+              to, at a college you had known for nine months, a gold medal. Then the long
+              middle where the volume stops being survivable and you survive it anyway,
+              then the wards. Two of
+              those years happened during a pandemic that shut the world down and handed every
+              person in it a reason to coast. You did not take it. Two-thirds of everything on
+              this page is in this one band — the part that happened so slowly and so early
+              that even you have probably stopped counting it. You were top of your year before
+              any of the rest of this started. Everything since has been you re-proving
+              something you had already settled in 2020.
+            </p>
+          </article>
+
+          <article class="phase rise">
+            <p class="phase-meta">
+              <span><span class="swatch" style="background:var(--band-2)"></span>Stratum II</span>
+              <span>Apr 2024 → Apr 2025</span>
+              <span>365 days × 8–18 h</span>
+              <span><b>≈ 4,745 hours</b></span>
+            </p>
+            <h3>The year you stopped reading about patients</h3>
+            <p>
+              Eight hours on a kind day. Eighteen on the ones that weren't, and there were more
+              of those than you ever admitted. A full year — no term breaks, no weekends that
+              counted. This is where you learned the thing that isn't in any book: how to be the
+              calmest person in a room that has stopped being calm. You finished on Tuesday,
+              22&nbsp;April&nbsp;2025 and became a doctor, permanently, in a way no exam in
+              August gets a vote on. That was 496 days ago. You have been one the whole time
+              you've been waiting.
+            </p>
+          </article>
+
+          <article class="phase rise">
+            <p class="phase-meta">
+              <span><span class="swatch" style="background:var(--keratin-ink)"></span>The junction</span>
+              <span>22 → 25 Apr 2025</span>
+              <span>3 days · 2,150 km</span>
+              <span><b>0 hours</b></span>
+            </p>
+            <h3>The only rest you got was a journey</h3>
+            <p>
+              Your internship ended in Chennai on a Tuesday. You reached home in Noida on the
+              Friday. Three days and about two thousand one hundred and fifty kilometres — the
+              single stretch in all 2,618 days that this page counts as nothing at all, and the
+              only one you would have been completely forgiven for stretching into a month.
+            </p>
+            <p>
+              It's worth saying plainly what the two bands above actually cost, because the
+              hours alone don't show it: you did nearly six years of medicine <em>2,150 km from
+              your own house</em>. Every ward round, every exam, every bad night, at that
+              distance from everyone who loves you. And then you came home on the Friday and
+              started again on the Saturday.
+            </p>
+            <p>
+              And 778 of those days had me at the other end of them — <em>61% of everything we
+              have ever had</em>, spent 2,150 km apart. That is the part of this I am least
+              able to be objective about. It ended on a Friday afternoon.
+            </p>
+
+            <figure class="reunion rise">
+              <div class="reunion-scene">
+                <span class="km">2,150 km</span>
+                <span class="road"></span>
+                <span class="city city-a">Chennai</span>
+                <span class="city city-b">Noida</span>
+                <span class="rh rh-wait"><svg><use href="#hrt"/></svg></span>
+                <span class="rh rh-move"><svg><use href="#hrt"/></svg></span>
+                <span class="pop" aria-hidden="true">
+                  <svg style="--px:-19px;--py:-22px"><use href="#hrt"/></svg>
+                  <svg style="--px:14px;--py:-26px"><use href="#hrt"/></svg>
+                  <svg style="--px:24px;--py:-9px"><use href="#hrt"/></svg>
+                  <svg style="--px:-24px;--py:-6px"><use href="#hrt"/></svg>
+                  <svg style="--px:6px;--py:-32px"><use href="#hrt"/></svg>
+                  <svg style="--px:-8px;--py:-30px"><use href="#hrt"/></svg>
+                </span>
+              </div>
+              <figcaption>25 April 2025 · 778 days of long distance, closed</figcaption>
+            </figure>
+          </article>
+
+          <article class="phase rise">
+            <p class="phase-meta">
+              <span><span class="swatch" style="background:var(--band-3)"></span>Stratum III</span>
+              <span>26 Apr 2025 → May 2026</span>
+              <span>401 days × 8 h</span>
+              <span><b>3,208 hours</b></span>
+            </p>
+            <h3>The band I'd point to</h3>
+            <p>
+              You gave yourself a hundred days at home. Then on Sunday, 3 August 2025, you
+              walked into a NEET PG hall and sat the whole thing — nine in the morning, three
+              and a half hours, two hundred questions — as a rehearsal. Everyone else's first
+              time in that room is the time that counts. Yours wasn't. That was the smartest
+              thing you could have done and almost nobody does it.
+            </p>
+            <p>
+              Then you got up on the Monday and did it again for three hundred and ninety-two
+              more days. Anyone can sprint at the end. Almost nobody gets back up the morning
+              after.
+              If someone asked me what you're actually made of, I'd skip the dramatic part
+              and point here.
+            </p>
+          </article>
+
+          <article class="phase rise">
+            <p class="phase-meta">
+              <span><span class="swatch" style="background:var(--band-4)"></span>Stratum IV</span>
+              <span>1 Jun → 30 Aug 2026</span>
+              <span>91 days × 12–18 h</span>
+              <span><b>≈ 1,365 hours</b></span>
+            </p>
+            <h3>Ninety-one days at fifteen hours</h3>
+            <p>
+              Do that division honestly: fifteen hours a day leaves nine for sleeping, eating,
+              and being a human being, and you held it for three months without one day off.
+              Every hour that wasn't spent keeping you alive was spent on this. It ended on a
+              Sunday morning — 180 questions, five sections, 210 minutes — and you walked in
+              having done absolutely everything that could be done.
+            </p>
+          </article>
+
+          <aside class="milo rise">
+            <div class="milo-art">
+              <svg viewBox="0 0 220 212" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="milo-title">
+                <title id="milo-title">Milo, a Shih Tzu</title>
+                <path d="M110 200C70 200 62 176 66 158c4-20 22-30 44-30s40 10 44 30c4 18-4 42-44 42Z" fill="var(--milo-b)"/>
+                <ellipse cx="90" cy="191" rx="15" ry="11" fill="var(--milo-a)"/>
+                <ellipse cx="130" cy="191" rx="15" ry="11" fill="var(--milo-a)"/>
+                <path d="M60 76c-22 6-28 38-20 62 8 22 28 28 38 16 8-10 2-48-2-64Z" fill="var(--milo-b)"/>
+                <path d="M160 76c22 6 28 38 20 62-8 22-28 28-38 16-8-10-2-48 2-64Z" fill="var(--milo-b)"/>
+                <circle cx="110" cy="92" r="52" fill="var(--milo-a)"/>
+                <circle cx="110" cy="45" r="15" fill="var(--milo-b)"/>
+                <path d="M110 43 96 34v18Z" fill="var(--eosin)"/>
+                <path d="M110 43 124 34v18Z" fill="var(--eosin)"/>
+                <circle cx="110" cy="43" r="4.5" fill="var(--eosin)"/>
+                <ellipse cx="110" cy="116" rx="21" ry="15" fill="var(--milo-b)"/>
+                <circle cx="89" cy="91" r="9" fill="#1B1020"/>
+                <circle cx="131" cy="91" r="9" fill="#1B1020"/>
+                <circle cx="91.5" cy="88" r="3" fill="#FFFFFF" opacity=".92"/>
+                <circle cx="133.5" cy="88" r="3" fill="#FFFFFF" opacity=".92"/>
+                <ellipse cx="110" cy="109" rx="8.5" ry="6.5" fill="#1B1020"/>
+                <path d="M110 116v5m0 0c-6 6-12 4-14 0m14 0c6 6 12 4 14 0" stroke="#1B1020" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <p class="milo-label">Also present · from 16 July 2020</p>
+              <h3>Milo — Milzu, to you</h3>
+              <p>
+                Which rhymes with <em>Shih Tzu</em>, and I have never once believed that was
+                an accident. Born 3 June 2020; home on 16 July at forty-three days old, in the
+                middle of a difficult year (Covid-19). He has been here for 2,237 of these
+                2,618 days since — 85% of everything on this page, and every last one of the
+                final 492. Shih Tzu means little lion, and they were bred in Tibet for exactly
+                one job: to sit with somebody. Durga rides a lion. You revised with a very small
+                one asleep against your leg, and I have never been sure which of you was
+                guarding the other.
+              </p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SCALE ─────────────────────────────────────────────── -->
+  <section>
+    <div class="wrap">
+      <h2 class="rise">26,898 hours is not a number anyone can feel.</h2>
+      <p class="lede rise">
+        So here it is converted into things that are. Every one of these is the same
+        quantity of your life, held up at a different angle.
+      </p>
+
+      <div class="cards">
+
+        <div class="card rise">
+          <span class="card-fig">3.07 years</span>
+          <span class="card-label">Continuous · no sleep</span>
+          <p>
+            1,121 days without stopping. If you'd done it in one unbroken stretch —
+            never sleeping, never eating, never once looking up — you'd have started in
+            <span class="fig">5&nbsp;August&nbsp;2023</span> and finished this morning.
+          </p>
+        </div>
+
+        <div class="card rise">
+          <span class="card-fig">13.4 years</span>
+          <span class="card-label">Of a full-time career</span>
+          <p>
+            A normal job runs about 2,000 hours a year. You have already worked a
+            thirteen-and-a-half-year career. You have not started the job yet.
+          </p>
+        </div>
+
+        <div class="card rise">
+          <span class="card-fig">2.7×</span>
+          <span class="card-label">The 10,000-hour rule</span>
+          <p>
+            Ten thousand hours is the number people quote for becoming world-class at
+            something. You are at nearly three times that, in one subject, before the career
+            has even started.
+          </p>
+        </div>
+
+        <div class="card rise">
+          <span class="card-fig">112,971,600</span>
+          <span class="card-label">Heartbeats, at rest</span>
+          <p>
+            At a resting seventy a minute, that is how many times your heart beat while you
+            were working. Almost a hundred and thirteen million contractions of the organ you
+            were simultaneously learning the pathology of.
+          </p>
+        </div>
+
+        <div class="card rise">
+          <span class="card-fig">64.2%</span>
+          <span class="card-label">Of every waking hour since 2019</span>
+          <p>
+            Roughly two of every three hours you have been conscious since July 2019, you
+            were working. Averaged across all 2,618 days — including birthdays, festivals,
+            sick days and the days you couldn't get out of bed — it comes to
+            <span class="fig">10.3</span> hours a day. Every day. For seven years.
+          </p>
+        </div>
+
+        <div class="card rise">
+          <span class="card-fig">2,150 km</span>
+          <span class="card-label">The range you did it from</span>
+          <p>
+            Chennai to Noida. Nearly six of these seven years happened at that distance
+            from your own house — every ward round, every exam, every bad night, that far
+            from everyone who would have sat with you.
+          </p>
+        </div>
+
+        <div class="card rise">
+          <span class="card-fig">492</span>
+          <span class="card-label">Consecutive days, no break</span>
+          <p>
+            From the Saturday after you got home to exam morning: 492 days in a row, at eight
+            hours and then at fifteen — with an entire national exam sat in the middle of it
+            and no pause on either side of it. The last real break you took was the journey
+            home, and that was three days long.
+          </p>
+        </div>
+
+        <div class="card rise">
+          <span class="card-fig">392</span>
+          <span class="card-label">Days after you'd already sat it once</span>
+          <p>
+            From the Monday after the 2025 paper to exam morning 2026. The second time, you
+            knew precisely what you were walking back into — the room, the clock, the whole
+            weight of it. That is the only version of this that takes real courage.
+          </p>
+        </div>
+
+        <div class="card rise">
+          <span class="card-fig">93</span>
+          <span class="card-label">Epidermal cycles</span>
+          <p>
+            Your skin has completely replaced itself about ninety-three times since you
+            started. You are, cell for cell, not the girl who walked into first year.
+            You built this one.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── THE PIVOT ─────────────────────────────────────────── -->
+  <section class="pivot">
+    <div class="wrap">
+      <h2 class="rise">Now the part I actually need you to read.</h2>
+
+      <div class="ratio rise">
+        <span class="in">26,898 hours in</span>
+        <span class="vs">against</span>
+        <span class="out">210 minutes out</span>
+      </div>
+
+      <div class="narrow">
+        <p class="rise">
+          NEET PG 2026 was 180 questions. Five sections of thirty-six, forty-two minutes each,
+          plus four for right and minus one for wrong — and you have now done this twice, two
+          hundred questions in that hall in 2025 and a hundred and eighty in 2026. Three
+          hundred and eighty questions. Two Sunday mornings, both of them starting at nine.
+          Do the arithmetic and it gets almost absurd: you spent <b class="fig">149 hours</b> of your life preparing for each
+          individual question, and each one gave you <b class="fig">70 seconds</b> to answer.
+          Every hour you studied bought you <b class="fig">0.47 seconds</b> of exam.
+        </p>
+        <p class="rise">
+          There is no version of a three-and-a-half-hour morning that can hold seven years —
+          not yours, not anyone's. It was never built to. It is a filter, and filters are
+          designed to lose information; that is the entire point of them.
+        </p>
+      </div>
+
+      <p class="pull rise">
+        Whatever number comes back, it is a measurement of one Sunday. The score is data
+        about the exam. The hours are data about you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── DERM ──────────────────────────────────────────────── -->
+  <section>
+    <div class="wrap">
+      <h2 class="rise">And you chose dermatology.</h2>
+      <p class="lede rise">
+        Of every specialty on that list, you chose the one you read by looking — the organ
+        a person wears on the outside, that they never picked and can't hide. That is a very
+        particular thing to be drawn to, and I have known you far too long to think it's an
+        accident.
+      </p>
+
+      <div class="derm-figs">
+        <div class="derm-fig rise">
+          <span class="n">3,000+</span>
+          <p>Named skin conditions you are signing up to tell apart, most of them by looking at a person for a few seconds.</p>
+        </div>
+        <div class="derm-fig rise">
+          <span class="n">1.8 m²</span>
+          <p>The largest organ there is, and the only one anybody can examine without instruments. Up to ten kilograms of it.</p>
+        </div>
+        <div class="derm-fig rise">
+          <span class="n">500 million</span>
+          <p>Skin cells a person sheds every day. You picked the organ that rebuilds itself faster than you can finish a textbook about it.</p>
+        </div>
+        <div class="derm-fig rise">
+          <span class="n">28 days</span>
+          <p>For one cell to climb from the base of the epidermis to the surface. About the length of a good revision cycle.</p>
+        </div>
+      </div>
+
+      <div class="narrow">
+        <p class="rise">
+          Here is what I keep thinking about. A keratinocyte is born in the <em>stratum basale</em>,
+          right at the floor of the epidermis, and spends about twenty-eight days climbing.
+          It changes the entire way up — flattens, hardens, gives up its own nucleus — until it
+          finally becomes the part of a person that the world is able to see. And then, having
+          made it to the surface, it lets go.
+        </p>
+        <p class="rise">
+          I don't think you were drawn to it for the hours or the lifestyle, whatever anyone
+          says. I think you were drawn to the one place in medicine where what is underneath
+          finally shows on the outside — where the thing a person has been carrying quietly
+          becomes visible, and somebody who knows how to look can finally name it.
+        </p>
+        <p class="rise">
+          And one more thing, which I only noticed while I was building this. Every slide
+          you will ever hold up to the light is stained with exactly two dyes. Haematoxylin
+          turns the nuclei violet. <em>Eosin turns everything else red</em> — cytoplasm,
+          collagen, the whole living body of the tissue. Without the red one, a section of
+          skin is just grey shapes. Eosin is what makes it possible to see anything at all.
+        </p>
+        <p class="rise">
+          This entire page is built from those two colours, and I want to be honest that I
+          didn't pick them to be sweet about it. They're simply what the tissue is. Your
+          favourite colour has been the colour of dermatology since long before either of us
+          was here — you just went and chose the one specialty that gets stained in it. The
+          violet is the science. The red is everything the science is actually looking at.
+        </p>
+        <p class="rise">
+          You have been climbing for <span class="fig">2,618</span> days.
+          Somebody has been reading the surface the whole time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DURGA ─────────────────────────────────────────────── -->
+  <section>
+    <div class="wrap">
+      <h2 class="rise">Your people have been telling this story for a thousand years.</h2>
+      <p class="lede rise">
+        Mahishasura's boon made him untouchable: he could not be killed by a man, or by an
+        animal, or by a god. The gods went out to fight him themselves and lost. So they gave
+        up everything they had and made someone who could.
+      </p>
+
+      <div class="narrow">
+        <p class="rise">
+          The part everybody skips is how long it took her. Nine nights. Not one heroic
+          afternoon — nine consecutive nights of not stopping, and the victory only on the
+          tenth day. Bengal has built its biggest festival of the year around that detail for
+          centuries, and I don't think it's really about the weapons. I think it's about the
+          nine nights.
+        </p>
+        <p class="rise">
+          <em>Durga</em> doesn't mean powerful. It comes from <em>durg</em> — a fortress. It
+          means the one who cannot be got past.
+        </p>
+        <p class="rise">
+          And Pujo isn't actually a goddess arriving. Every Bengali knows this: it's a daughter
+          coming home. Uma, married far away, allowed back to her parents' house for a few short
+          days, and an entire city singing <em>agomoni</em> songs about it because she is finally
+          back. You did that on 25 April 2025. You had been gone nearly six years, and you came
+          two thousand one hundred and fifty kilometres.
+        </p>
+        <p class="rise">
+          One more and then I'll leave it alone. <em>Debopriya</em> — deva, priya — means
+          beloved of the gods. I'm not going to pretend anybody arranged that. I'm only telling
+          you it is what your name has said the whole time, and that on 16 October, when the
+          dhak starts, it will be the first Pujo since 2019 with no exam standing on the other
+          side of it. There is a whole residency ahead of you, obviously — but that is the job,
+          not another gate. That is the thing all seven years were for.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── THE SPLIT ─────────────────────────────────────────── -->
+  <section>
+    <div class="wrap">
+      <h2 class="rise">There is a second timeline on this page.</h2>
+      <p class="lede rise">
+        I have known you since 2013. I have been in love with you since roughly ten minutes
+        after that, and I did not get to say it out loud until Friday, 10 March 2023 — which
+        means I spent the better part of a decade doing the exact thing this entire page is
+        about. Working at something with no deadline, no audience, and no guarantee at all
+        that it would ever pay out.
+      </p>
+
+      <div class="narrow">
+        <p class="rise">
+          So when I say I understand what stratum three cost you — getting back up the
+          morning after, for three hundred and ninety-two more days — I am not guessing.
+        </p>
+      </div>
+
+      <div class="split rise">
+        <div class="split-bar" role="img" aria-label="10 March 2023 splits the total almost exactly in half: 13,480 hours as her friend, 13,418 hours together.">
+          <div class="split-a"><span class="split-h">13,480 h</span></div>
+          <div class="split-b"><span class="split-h">13,418 h</span></div>
+        </div>
+        <div class="split-mark" aria-hidden="true"></div>
+        <div class="split-legend">
+          <span>As your friend</span>
+          <span class="split-date">10 Mar 2023</span>
+          <span>As yours</span>
+        </div>
+      </div>
+
+      <div class="narrow">
+        <p class="rise" style="margin-top:2.5rem">
+          And here is the thing I found when I did the arithmetic, which I promise I did not
+          engineer. The day we started cuts your 26,898 hours almost exactly in half.
+          <em>13,480</em> of them I watched as your friend. <em>13,418</em> of them I have
+          watched as yours. Sixty-two hours of difference, out of twenty-six thousand eight
+          hundred and ninety-eight.
+        </p>
+        <p class="rise">
+          Thirteen years of knowing you. One thousand two hundred and seventy-two days of
+          being allowed to say so out loud — that's what today is, if you count from
+          10 March 2023. I would have waited the other thirteen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LETTER ────────────────────────────────────────────── -->
+  <section class="letter">
+    <div class="wrap">
+      <h2 class="rise">Five things that are true no matter what the result says.</h2>
+
+      <ul class="letter-list">
+        <li class="rise has-art">
+          <div class="li-art">
+            <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="coat-title">
+              <title id="coat-title">A white coat with a stethoscope around the collar</title>
+              <path d="M73 27C55 31 44 44 42 61L36 214h128l-6-153c-2-17-13-30-31-34Z" fill="var(--coat)" stroke="var(--rule)" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M74 27 100 85 126 27Z" fill="var(--band-1)"/>
+              <path d="M74 27 100 85 87 91 61 38Z" fill="var(--coat-fold)"/>
+              <path d="M126 27 100 85 113 91 139 38Z" fill="var(--coat-fold)"/>
+              <circle cx="100" cy="110" r="3.6" fill="var(--coat-fold)"/>
+              <circle cx="100" cy="134" r="3.6" fill="var(--coat-fold)"/>
+              <rect x="116" y="150" width="32" height="28" fill="none" stroke="var(--coat-fold)" stroke-width="3"/>
+              <path d="M82 29c-9 34-7 76 10 114 3 7 6 13 8 20" fill="none" stroke="var(--eosin)" stroke-width="7" stroke-linecap="round"/>
+              <path d="M118 29c9 34 7 76-10 114-3 7-6 13-8 20" fill="none" stroke="var(--eosin)" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="100" cy="176" r="15" fill="var(--coat-fold)" stroke="var(--eosin)" stroke-width="4"/>
+              <circle cx="100" cy="176" r="8" fill="var(--coat)"/>
+            </svg>
+          </div>
+          <div>
+            <h3>You are already a doctor.</h3>
+            <p>
+              That happened on 22 April 2025 and it is not up for review in September. NEET PG
+              decides where you train next. It has no opinion whatsoever on whether you're any
+              good. The coat is already yours and nobody is coming to take it back.
+            </p>
+          </div>
+        </li>
+        <li class="rise">
+          <h3>You will not be able to feel any of this from the inside.</h3>
+          <p>
+            Effort never feels like effort while you're spending it — it just feels like
+            Tuesday, and being behind, and everyone else probably doing more. That is precisely
+            why the counting had to be done from outside. You are the last person in the world
+            equipped to be fair to yourself about this.
+          </p>
+        </li>
+        <li class="rise">
+          <h3>The waiting is worse than the exam and it is also almost over.</h3>
+          <p>
+            There is nothing left that you can do to the outcome. That's not a loss of control —
+            it's the first genuine rest you've been allowed in seven years. Take it. You have
+            2,618 days of standing to be permitted to sit down.
+          </p>
+        </li>
+        <li class="rise">
+          <h3>None of the 26,898 hours goes anywhere.</h3>
+          <p>
+            Not one of them is refundable, and not one of them is wasted regardless of the
+            number. Everything you learned is still in you on 1 September. There is no result
+            that reaches backwards and un-does the work.
+          </p>
+        </li>
+        <li class="rise">
+          <h3>Your mother and your father are already proud of you.</h3>
+          <p>
+            Present tense, nothing pending, no conditions attached to it. Not proud-if. They
+            have been proud since a gold medal in your first year, and they stayed proud
+            through six years of you being 2,150 km away, and through the Friday you finally
+            came back. Whatever the number turns out to be, it is not going to alter the way
+            those two people look at you by even a degree. That was settled a very long time
+            ago, and everybody in your house can see it except you.
+          </p>
+        </li>
+      </ul>
+
+      <div class="close">
+        <p class="rise">
+          Thirteen years. I'm putting the next sentence at the very bottom, after all of the
+          evidence, so that it reads as a finding and not just a feeling.
+        </p>
+
+        <p class="big rise">I am completely in love with you, Dr. Debopriya Das.</p>
+
+        <p class="rise">
+          I have been since 2013 — through nearly ten years of not being able to say it and
+          three and a half years of getting to. Not because of a result; there isn't one yet.
+          Not because of the sprint, either — the sprint is the easy part to admire. It's
+          stratum three. It's the morning of Monday, 4 August 2025 — the day after you had
+          already sat the whole exam once, when you could have taken a fortnight and not one
+          person on earth would have said a word about it, and instead you got up and started
+          again, and then didn't mention it to anyone.
+          That's the whole thing. That's the person I've been in love with for thirteen years.
+          Twenty-six thousand, eight hundred and ninety-eight hours is just what it looks like
+          when someone like that is left alone for seven years.
+        </p>
+
+        <p class="rise">
+          So whatever comes back in September — and I hope it's everything, I hope it's derm,
+          I hope it's the college you want in Delhi, just next to me — please understand that
+          the proud part already happened. It happened 26,898 times. I watched half of them
+          from across a room and half of them from beside you, and it was never once in doubt.
+        </p>
+
+        <p class="rise">
+          Now put the books down. It's over. Come here.
+        </p>
+
+        <p class="sig rise">
+          — Shiv · Pingu, to you<br>
+          1 September 2026 · day 1,272 of us · counting since 2013
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ── Reveal on scroll ──────────────────────────────────── */
+  var rise = document.querySelectorAll(".rise");
+  if (reduce || !("IntersectionObserver" in window)) {
+    rise.forEach(function (el) { el.classList.add("seen"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var sibs = Array.prototype.slice.call(el.parentNode.children).filter(function (n) {
+          return n.classList && n.classList.contains("rise");
+        });
+        el.style.transitionDelay = Math.min(sibs.indexOf(el), 6) * 70 + "ms";
+        el.classList.add("seen");
+        io.unobserve(el);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    rise.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ── Count up to the total ─────────────────────────────── */
+  var counter = document.getElementById("counter");
+  if (counter) {
+    var target = parseInt(counter.getAttribute("data-target"), 10);
+    var fmt = function (n) { return n.toLocaleString("en-IN"); };
+    if (reduce) {
+      counter.textContent = fmt(target);
+    } else {
+      var started = false;
+      var run = function () {
+        if (started) return;
+        started = true;
+        var t0 = null, dur = 2600;
+        var step = function (t) {
+          if (t0 === null) t0 = t;
+          var p = Math.min((t - t0) / dur, 1);
+          var e = 1 - Math.pow(1 - p, 4);           // ease-out quart
+          counter.textContent = fmt(Math.round(target * e));
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      };
+      setTimeout(run, 450);
+    }
+  }
+
+  /* ── Scroll heart ──────────────────────────────────────── */
+  var prog  = document.querySelector(".prog"),
+      fill  = document.getElementById("progFill"),
+      heart = document.getElementById("progHeart"),
+      rain  = document.getElementById("rain");
+
+  if (prog && fill && heart && rain) {
+    var glyph = heart.querySelector("svg"), fired = false;
+
+    var shower = function () {
+      for (var i = 0; i < 46; i++) {
+        var el = document.createElement("div"), size = 10 + Math.random() * 26;
+        el.className = "fh";
+        el.style.width = el.style.height = size.toFixed(1) + "px";
+        el.style.left = (Math.random() * 100).toFixed(2) + "vw";
+        el.style.color = Math.random() < 0.72 ? "var(--eosin)" : "var(--band-4)";
+        el.style.opacity = (0.5 + Math.random() * 0.5).toFixed(2);
+        el.style.setProperty("--dx", ((Math.random() - 0.5) * 240).toFixed(0) + "px");
+        el.style.setProperty("--rot", ((Math.random() - 0.5) * 720).toFixed(0) + "deg");
+        el.style.animation = "fall " + (2.6 + Math.random() * 2.6).toFixed(2) +
+                             "s linear " + (Math.random() * 1.1).toFixed(2) + "s forwards";
+        el.appendChild(glyph.cloneNode(true));
+        el.addEventListener("animationend", function () { this.remove(); });
+        rain.appendChild(el);
+      }
+    };
+
+    /* scrollHeight is cached so the scroll handler only ever writes, never
+       forces a reflow — and there is deliberately no rAF latch here: a deferred
+       frame (hidden tab, throttled rAF) would leave the flag stuck and kill the
+       indicator for the rest of the session. */
+    var maxScroll = 0;
+    var measure = function () {
+      maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    };
+
+    var track = function () {
+      var p = maxScroll > 0 ? Math.min(Math.max(window.scrollY / maxScroll, 0), 1) : 0;
+      fill.style.height = (p * 100).toFixed(2) + "%";
+      heart.style.top = (p * 100).toFixed(2) + "%";
+      if (reduce) return;
+      if (!fired) heart.style.transform = "scale(" + (0.45 + p * 1.15).toFixed(3) + ")";
+      if (p > 0.995 && !fired) {
+        fired = true;
+        heart.style.transform = "";
+        heart.classList.add("burst");
+        shower();
+      } else if (p < 0.9 && fired) {
+        fired = false;
+        heart.classList.remove("burst");
+      }
+    };
+
+    window.addEventListener("scroll", track, { passive: true });
+    window.addEventListener("resize", function () { measure(); track(); });
+    document.addEventListener("visibilitychange", track);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { measure(); track(); });
+    }
+    measure();
+    track();
+  }
+
+  /* ── Drifting nuclei ───────────────────────────────────── */
+  var cv = document.getElementById("field");
+  if (!cv) return;
+  var ctx = cv.getContext("2d");
+  var cells = [];
+  var w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+  var light = window.matchMedia("(prefers-color-scheme: light)").matches;
+  var stains = light
+    ? ["150,110,190", "205,110,140", "120,80,170"]
+    : ["150,110,200", "228,132,156", "122,84,176"];
+
+  function seed() {
+    var area = w * h;
+    var n = Math.max(28, Math.min(140, Math.round(area / 16000)));
+    cells = [];
+    for (var i = 0; i < n; i++) {
+      cells.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: 1.1 + Math.random() * 3.6,
+        sq: 0.75 + Math.random() * 0.5,           // nuclei aren't circles
+        rot: Math.random() * Math.PI,
+        vy: -(0.045 + Math.random() * 0.14),      // keratinocytes migrate upward
+        vx: (Math.random() - 0.5) * 0.045,
+        a: 0.10 + Math.random() * 0.34,
+        c: stains[(Math.random() * stains.length) | 0]
+      });
+    }
+  }
+
+  function size() {
+    w = cv.clientWidth; h = cv.clientHeight;
+    cv.width = Math.round(w * dpr);
+    cv.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    seed();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    for (var i = 0; i < cells.length; i++) {
+      var c = cells[i];
+      c.y += c.vy; c.x += c.vx;
+      if (c.y < -8) { c.y = h + 8; c.x = Math.random() * w; }
+      if (c.x < -8) c.x = w + 8;
+      if (c.x > w + 8) c.x = -8;
+
+      ctx.save();
+      ctx.translate(c.x, c.y);
+      ctx.rotate(c.rot);
+      ctx.beginPath();
+      ctx.ellipse(0, 0, c.r, c.r * c.sq, 0, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(" + c.c + "," + c.a + ")";
+      ctx.fill();
+      ctx.restore();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+
+  var raf = null;
+  size();
+  if (reduce) {
+    ctx.clearRect(0, 0, w, h);
+    cells.forEach(function (c) {
+      ctx.save();
+      ctx.translate(c.x, c.y);
+      ctx.rotate(c.rot);
+      ctx.beginPath();
+      ctx.ellipse(0, 0, c.r, c.r * c.sq, 0, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(" + c.c + "," + c.a + ")";
+      ctx.fill();
+      ctx.restore();
+    });
+  } else {
+    raf = requestAnimationFrame(draw);
+  }
+
+  var rt;
+  window.addEventListener("resize", function () {
+    clearTimeout(rt);
+    rt = setTimeout(function () {
+      size();
+      if (reduce) return;
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(draw);
+    }, 160);
+  });
+})();
+</script>
+</body>
+</html>
